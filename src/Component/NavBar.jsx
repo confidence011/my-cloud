@@ -1,7 +1,9 @@
 import {useState} from 'react'
-import logo from '../assets/logo 2.png'
-import {FaBars} from 'react-icons/fa'
-import{FaTimes} from 'react-icons/fa'
+import logo from '../assets/logo 2.png';
+import {FaBars} from 'react-icons/fa';
+import{FaTimes} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+// import { link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -19,11 +21,11 @@ const toggle =()=>{
                 <h1 className='text-4xl font-bold mr-4 sm:text-3xl flex'><img src={logo} className='w-10 h-10 mr-2' alt="logo" />Cloud</h1>
 
                 <ul className='hidden md:flex gap-7 font-bold text-2xl px-40'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Support</li>
-                    <li>Platform</li>
-                    <li>Pricing</li>
+                    <Link to='/'> <li>Home</li>   </Link> 
+                    <Link to='/about'> <li>About</li> </Link>
+                    <Link to='/support'> <li>Support</li> </Link>
+                    <Link to='/platform'> <li>Platform</li> </Link>
+                    <Link to='/pricing'> <li>Pricing</li> </Link>
                 </ul>
             </div>
 
